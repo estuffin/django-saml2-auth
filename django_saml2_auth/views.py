@@ -187,7 +187,7 @@ def acs(r):
     user_identity = authn_response.get_identity()
     
     print('authn_response')
-    print(authn_response.authn_info())
+    print(authn_response)
     print('user_identity')
     print(user_identity)
         
