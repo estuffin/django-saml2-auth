@@ -185,6 +185,12 @@ def acs(r):
         return HttpResponseRedirect(get_reverse([denied, 'denied', 'django_saml2_auth:denied']))
 
     user_identity = authn_response.get_identity()
+    
+    print('authn_response')
+    print(authn_response.authn_info())
+    print('user_identity')
+    print(user_identity)
+        
     if user_identity is None:
         return HttpResponseRedirect(get_reverse([denied, 'denied', 'django_saml2_auth:denied']))
 
