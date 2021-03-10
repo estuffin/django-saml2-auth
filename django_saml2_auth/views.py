@@ -183,6 +183,9 @@ def acs(r):
         resp, entity.BINDING_HTTP_POST)
     if authn_response is None:
         return HttpResponseRedirect(get_reverse([denied, 'denied', 'django_saml2_auth:denied']))
+    
+    print('return addy')
+    print(authn_response.return_addrs)
 
     user_identity = authn_response.get_identity()
     
